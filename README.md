@@ -1,4 +1,4 @@
-# Redshift::Rails
+# Redshift::Rails [![Gem Version](https://badge.fury.io/rb/redshift-rails.svg)](https://badge.fury.io/rb/redshift-rails)
 
 The library provides the railtie that allows redshift-client into Rails.
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/redshift-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dakatsuka/redshift-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

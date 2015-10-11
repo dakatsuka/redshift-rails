@@ -1,5 +1,6 @@
 require "redshift/client"
 require "redshift/rails/version"
+require "redshift/rails/configuration"
 require "redshift/rails/middleware"
 require "redshift/rails/railtie" if defined? Rails
 

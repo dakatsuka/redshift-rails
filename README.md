@@ -1,6 +1,6 @@
 # Redshift::Rails [![Gem Version](https://badge.fury.io/rb/redshift-rails.svg)](https://badge.fury.io/rb/redshift-rails)
 
-The library provides the railtie that allows redshift-client into Rails.
+The library provides the railtie that allows redshift-client into Rails >= 4.
 
 ## Installation
 
@@ -20,7 +20,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Set your redshift url to `$REDSHIFT_URL`:
+
+```
+$ export REDSHIFT_URL="redshift://user:password@*****.region.redshift.amazonaws.com:5439/dbname"
+```
+
+or create `config/redshift.yml`:
+
+```yaml
+# config/redshift.yml
+
+development:
+  host: *****.region.redshift.amazonaws.com
+  port: 5439
+  user: user
+  password: password
+  dbname: dbname
+```
+
+You can call `Redshift::Client` at anywhere.
+
+```ruby
+class HealthController < ApplicationConttoller
+  def index
+    render json: Redshift::Client.connection.exec("SELECT NOW()").first
+  end
+end
+```
 
 ## Development
 
@@ -32,6 +59,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/dakatsuka/redshift-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
+## TODO
+
+* Test
 
 ## License
 

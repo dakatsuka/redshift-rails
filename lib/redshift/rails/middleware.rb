@@ -6,9 +6,17 @@ module Redshift
       end
 
       def call(env)
-        @app.call(env)
-      ensure
-        Redshift::Client.disconnect
+        testing = env['rack.test']
+
+        response = @app.call(env)
+        response[2] = ::Rack::BodyProxy.new(response[2]) do
+          Redshift::Client.disconnect unless testing
+        end
+
+        response
+      rescue Exception
+        Redshift::Client.disconnect unless testing
+        raise
       end
     end
   end

@@ -1,4 +1,5 @@
 require 'active_support/configurable'
+require 'singleton'
 require 'yaml'
 require 'erb'
 require 'uri'

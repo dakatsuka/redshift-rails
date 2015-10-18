@@ -1,4 +1,4 @@
-# Redshift::Rails [![Gem Version](https://badge.fury.io/rb/redshift-rails.svg)](https://badge.fury.io/rb/redshift-rails)
+# Redshift::Rails [![Gem Version](https://badge.fury.io/rb/redshift-rails.svg)](https://badge.fury.io/rb/redshift-rails) [![Build Status](https://travis-ci.org/dakatsuka/redshift-rails.svg?branch=master)](https://travis-ci.org/dakatsuka/redshift-rails)
 
 The library provides the railtie that allows redshift-client into Rails >= 4.
 
